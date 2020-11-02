@@ -34,7 +34,7 @@ rule index_reference:
     shell:
         'bwa index -p data/bwa-idx/macaque-ref {input}'
 
-rule map_reads:
+rule carolines_rule:
     input:
         ref = 'data/macaque-ref.fna',
         reads = 'data/reads/macaque-{sex}.fastq'
@@ -42,3 +42,4 @@ rule map_reads:
         'something, figure out later'
     shell:
         'ls -la'
+
